@@ -1,0 +1,280 @@
+.filePreviewZone{
+    display:-webkit-flex;
+    display:flex;
+    flex-wrap: wrap;;
+    -webkit-flex-wrap: wrap;
+    margin-top:15px;
+    min-height:3rem;
+    width:100%;
+    position:relative;
+    padding-top:25px;
+    overflow:hidden;
+    border:3px dashed #cfcfcf;
+}
+.filedragenter {
+    box-shadow: 0 0 10px 3px #999 inset;
+}
+.uploadfiles {
+    display:block;
+    padding:0px 0px 30px 0;
+
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    position:relative;
+    border:1px solid #f4f4f4;
+    border-radius:4px;
+    overflow:hidden;
+    float:left;
+}
+
+.cancelAll{
+    position:absolute;
+    right:5px;
+    top:5px;
+    width:20px;
+    height:20px;
+    background-image:url(/Resources/plugin/Upload_h5/file/delete.png);
+    background-position:center;
+    background-size:15px;
+    background-repeat:no-repeat;
+    z-index:100;
+}
+.cancelfile{
+    display:block;
+    position:absolute;
+    bottom:5px;
+    right: 5px;
+    width:20px;
+    height:20px;
+    font-size:12px;
+    color:#fff;
+    background: transparent;
+    line-height: 20px;
+    text-align:center;
+    background-image:url(/Resources/plugin/Upload_h5/file/delete.png);
+    background-position:center;
+    background-size:15px;
+    background-repeat:no-repeat;
+}
+.fileTip{
+    font-size:12px;
+    color:#888;
+    display:block;
+    position:absolute;
+    bottom:5px;
+    left:5px;
+
+}
+.fileloaded{
+    display:block;
+    position:absolute;
+    bottom:5px;
+    right: 30px;
+    width:20px;
+    height:20px;
+    font-size:12px;
+    color:#fff;
+    background: #a94442;
+    line-height: 20px;
+    text-align:center;
+}
+.bigview{
+    display:block;
+    width:20px;
+    height:20px;
+    right:5px;
+    top:5px;
+    position:absolute;
+    background-image:url(/Resources/plugin/Upload_h5/file/bigview.png);
+    background-position:center;
+    background-size:20px;
+    background-repeat:no-repeat;
+    z-index:10;
+    background-color:transparent;
+}
+.showView{
+    position: fixed;
+    z-index:101;
+    overflow:hidden;
+}
+@keyframes viewChange{
+    100%{
+        height:90%;
+        width:90%;
+        left:5%;
+        top:5%;
+    }
+}
+@-webkit-keyframes viewChange{
+    100%{
+        height:90%;
+        width:90%;
+        left:5%;
+        top:5%;
+    }
+}
+@-moz-keyframes viewChange{
+    100%{
+        height:90%;
+        width:90%;
+        left:5%;
+        top:5%;
+    }
+}
+@-ms-keyframes viewChange{
+    100%{
+        height:90%;
+        width:90%;
+        left:5%;
+        top:5%;
+    }
+}
+.viewinit {
+    box-sizing:border-box;
+    border-radius:5px;
+    background:#fff;
+    box-shadow:0 0 10px 1px #999;
+}
+.openedview {
+    animation:viewChange;
+    -webkit-animation-duration: 0.6s;
+    -moz-animation-duration: 0.6s;
+    -o-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes closedView {
+    100%{
+        left:-100%;
+        box-shadow:none;
+    }
+}
+@-webkit-keyframes closedView {
+    100%{
+        left:-100%;
+        box-shadow:none;
+    }
+}
+@-moz-keyframes closedView {
+    100%{
+        left:-100%;
+        box-shadow:none;
+    }
+}
+@-ms-keyframes closedView {
+    100%{
+        left:-100%;
+        box-shadow:none;
+    }
+}
+.thisviewclose {
+    /*animation:closedView;
+    -webkit-animation-duration: 0.6s;
+    -moz-animation-duration: 0.6s;
+    -o-animation-duration: 0.6s;
+    animation-duration: 0.6s;*/
+    transition:all 0.6s;
+    -webkit-transition:all 0.6s;
+}
+.viewimgbox{
+    width:100%;
+    height:100%;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+    justify-content:center;
+    align-items: center;
+
+}
+.viewimgbox img{
+    display:block;
+    max-width:100%;
+    max-height:100%;
+    margin:0 auto;
+}
+.closeView{
+    display:block;
+    width:45px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    color:#999;
+    text-shadow:0 3px 4px #999;
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:110;
+
+}
+.filePreviewZone img{
+    display:block;
+    width:100%;
+    height:100%;
+}
+.errortips{
+    width:100%;
+}
+.errortips .litTip{
+    display:block;
+    width:90%;
+    font-size:12px;
+    color:#ff2a00;
+    box-sizing:border-box;
+    padding:5px 20px 5px 5px;
+    border-radius:2px;
+    line-height:25px;
+    background:#eececc;
+    position:relative;
+    margin:10px auto 10px auto;
+}
+.errortips .deltip{
+    display:block;
+    width:30px;
+    height:100%;
+    right:0;
+    top:0;
+    position:absolute;
+    background-image:url(/Resources/plugin/Upload_h5/file/delete.png);
+    background-position:center;
+    background-size:15px;
+    background-repeat:no-repeat;
+}
+.fileError{
+    opacity:0.8;
+}
+.fileError:before{
+    content:"";
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background:#ff2a00;
+    opacity:0.2;
+}
+.progressView {
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    z-index:100;
+    background:#000;
+    opacity:0.6;
+    text-align:center;
+    line-height:30px;
+    color:#fff;
+    font-size:14px;
+    -webkit-box-align:center;
+}
+.uploadfiles img{
+    display:block;
+    width:100%;
+    height:100%;
+}
