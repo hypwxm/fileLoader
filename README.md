@@ -21,38 +21,23 @@ var file = new SetUploaderFilesPreview({
 
 # params
 ## opts
-#### ``` resource:  file类型的元素  .类名或 #id********  必须 ```
-#### ``` target:  放置预览图区域,类名或 #id********  可选 ```
-#### ``` fullSize:  总文件尺寸大小********  默认不限制 ```
-#### ``` size:  单文件尺寸大小限制********   默认不限制 ```
-#### ```num:  上传最大文件总数********  默认不限制 ```
-#### ``` allowedType: 限制文件类型```
-#### ```allowedExtensions:   限制文件扩展名```
-#### ```drag:  是否允许拖拽  （true时可拖拽）```
-#### ```exFilter: 方法，扩展的过滤器，必须返回一个数组，否则会报错```
-#### ```bigView:  是否允许用户放大图片```
-#### ```multi:  true允许多图，如果不指定这个属性即使file写了multiple属性也不允许多图```
-#### 
-```immediately:图片添加成功立即执行的方法，比如ajax上传(有错误信息无法上传) 
-params {
-          _file:当前文件
-           files：当前实例内的所有符合规定的文件
-}
-```
-#### 
-``` aftercancel: 点击删除，删除单张图片的时候触发的方法
-params {_file:删除的当前文件的相关信息}
-```
-#### ```aftercancelAll:点击删除，删除当前实例内所有图片时触发的方法```
-
-#### ```fileErrorFun:当前文件如果太大没有完成上传，那没会执行到这个函数，```
->>params
-    ｛
-        file：文件太大而无法完成上传的目前单个文件。是个文件对象。
->> ｝
-#### ```openFileChangePos: 是否开启图片可拖动进行位置排序（true表示开启），排序对页面显示进行调整。同时对实例的files数组也会调整为对应顺序。```
-
-#### ```afterFilesPosChange: 重新排序后执行的方法。如果openFileChangePos ！= true 那么这个将会无效。参数为重新排序后的实例的files数组。```
+- ``` resource:  file类型的元素  .类名或 #id********  必须 ```
+- ``` target:  放置预览图区域,类名或 #id********  可选 ```
+- ``` fullSize:  总文件尺寸大小********  默认不限制 ```
+- ``` size:  单文件尺寸大小限制********   默认不限制 ```
+- ```num:  上传最大文件总数********  默认不限制 ```
+- ``` allowedType: 限制文件类型```
+- ```allowedExtensions:   限制文件扩展名```
+- ```drag:  是否允许拖拽  （true时可拖拽）```
+- ```exFilter: 方法，扩展的过滤器，必须返回一个数组，否则会报错```
+- ```bigView:  是否允许用户放大图片```
+- ```multi:  true允许多图，如果不指定这个属性即使file写了multiple属性也不允许多图```
+- ``` immediately:图片添加成功立即执行的方法，比如ajax上传(有错误信息无法上传) params { _file:当前文件 files：当前实例内的所有符合规定的文件}```
+- ``` aftercancel: 点击删除，删除单张图片的时候触发的方法. params {_file:删除的当前文件的相关信息}```
+- ```aftercancelAll:点击删除，删除当前实例内所有图片时触发的方法```
+- ```fileErrorFun:当前文件如果太大没有完成上传，那没会执行到这个函数，params{file：文件太大而无法完成上传的目前单个文件。是个文件对象。}```
+- ```openFileChangePos: 是否开启图片可拖动进行位置排序（true表示开启），排序对页面显示进行调整。同时对实例的files数组也会调整为对应顺序。```
+- ```afterFilesPosChange: 重新排序后执行的方法。如果openFileChangePos ！= true 那么这个将会无效。参数为重新排序后的实例的files数组。```
 
 
 
